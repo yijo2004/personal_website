@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joseph Yi - Personal Website</title>
+    <meta name="description" content="Personal website showcasing my work, skills, and experience">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="#home">Joseph Yi</a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Hi, I'm <span class="highlight">Joseph Yi</span>
+                </h1>
+                <p class="hero-subtitle">
+                    A developer who loves to code and build things
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="profile-image" style="width: 300px; height: 300px; border-radius: 50%; overflow: hidden;">
+                    <img src="selfie.jpg?v=2" alt="Joseph Yi" class="profile-img" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%; display: block;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-stats">
+                    <div class="stat">
+                        <h3>GPA 3.7</h3>
+                        <p>BS in CS ('26)</p>
+                    </div>
+                    <div class="stat">
+                        <h3>4</h3>
+                        <p>Major Projects</p>
+                    </div>
+                    <div class="stat">
+                        <h3>EN / KO</h3>
+                        <p>Languages</p>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <p>
+                        I'm a Computer Science student at the University of Michigan (Class of 2026) focused on systems,
+                    web platforms, and scalable, user-friendly tools. I enjoy taking projects from idea to
+                    deployment—whether that's implementing a user-level thread library in C++ or shipping full-stack
+                    apps for real users.
+                    </p>
+                    <p>
+                        When I'm not coding, you can find me exploring new technologies, 
+                        doing music/practicing guitar, or enjoying outdoor activities.
+                    </p>
+                </div>
+            </div>
+            <div class="about-extra">
+                <ul class="about-list">
+                    <li><strong>Relevant Courses:</strong> Data Structures & Algorithms, Intro to Operating Systems, Web Systems, Intro to Computer Security, Building Data-Driven Web Apps</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Skills & Technologies</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Programming</h3>
+                    <div class="skill-items">
+                        <span class="skill-item">C/C++</span>
+                        <span class="skill-item">Python</span>
+                        <span class="skill-item">C#</span>
+                        <span class="skill-item">Java</span>
+                        <span class="skill-item">R</span>
+                        <span class="skill-item">SQL</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Frontend</h3>
+                    <div class="skill-items">
+                        <span class="skill-item">HTML</span>
+                        <span class="skill-item">CSS</span>
+                        <span class="skill-item">JavaScript</span>
+                        <span class="skill-item">React</span>
+                        <span class="skill-item">Tailwind CSS</span>
+                        <span class="skill-item">WordPress</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Backend</h3>
+                    <div class="skill-items">
+                        <span class="skill-item">Flask</span>
+                        <span class="skill-item">Django</span>
+                        <span class="skill-item">PHP</span>
+                        <span class="skill-item">REST APIs</span>
+                        <span class="skill-item">Firebase</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Tools</h3>
+                    <div class="skill-items">
+                        <span class="skill-item">Git</span>
+                        <span class="skill-item">Docker</span>
+                        <span class="skill-item">VS Code</span>
+                        <span class="skill-item">Linux</span>
+                        <span class="skill-item">Visual Studio</span>
+                        <span class="skill-item">Eclipse</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+    
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Multi-Processor Thread Library</h3>
+                        <p>
+                            A user-level thread library in C++ supporting context switching, mutexes, condition variables,
+                            FIFO scheduling for ready/mutex/cond queues, and timer/IPI-driven preemption across cores.
+                        </p>
+                        <div class="project-tech">
+                            <span>C++</span>
+                            <span>ucontext</span>
+                            <span>Concurrency</span>
+                        </div>
+                        <div class="project-links">
+                            <!-- <a href="https://github.com/yijo2004" class="project-link">
+                                <i class="fab fa-github"></i> Repo(s)
+                            </a> -->
+                            Repo unavailable due to private university policy
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Secure Partner Portal for U-M Nursing</h3>
+                        <p>
+                            Private server-side application used by 10+ partners to share files, preview/download securely,
+                            and contribute data for COSSUP. Includes a custom Google Maps interface for naloxone distributors.
+                        </p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>Flask/Django</span>
+                            <span>Google Maps</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://umsn-cossup.com/" class="project-link">
+                                Website Link
+                            </a>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Simplified Relational DB Emulator</h3>
+                        <p>
+                            CLI database emulator supporting CREATE/INSERT/DELETE/PRINT/JOIN with custom data structures
+                            (hash tables, BSTs) for indexing and multi-table joins across typed columns.
+                        </p>
+                        <div class="project-tech">
+                            <span>C++</span>
+                            <span>Data Structures</span>
+                            <span>Parsing</span>
+                        </div>
+                        <div class="project-links">
+                            <!-- <a href="https://github.com/yijo2004" class="project-link">
+                                <i class="fab fa-github"></i> Code
+                            </a> -->
+                            Repo unavailable due to private university policy
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-church"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Local Church Website (Frontend)</h3>
+                        <p>
+                            Helped ship a React-based site and crafted a responsive 404 page using Tailwind CSS, HTML, React,
+                            and Docker—contributing to a ~25% increase in average userbase.
+                        </p>
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>Tailwind CSS</span>
+                            <span>Docker</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://annarbor.hmcc.net/" class="project-link">
+                                Website Link
+                            </a>
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Let's work together!</h3>
+                    <p>I'm always interested in new opportunities and exciting projects. Feel free to reach out if you'd like to collaborate or just say hello!</p>
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <i class="fas fa-envelope"></i>
+                            <span>yijo@umich.edu</span>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Ann Arbor, United States</span>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://github.com/yijo2004" class="social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/yijo/" class="social-link">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://www.instagram.com/josephyiii/" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Joseph Yi. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
