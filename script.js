@@ -273,68 +273,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// Parallax effect for hero section
-window.addEventListener('scroll', () => {
-    const scrolled = window.pageYOffset;
-    const hero = document.querySelector('.hero');
-    if (hero) {
-        const rate = scrolled * -0.5;
-        hero.style.transform = `translateY(${rate}px)`;
-    }
-});
-
-// Skills animation on scroll
-const skillItems = document.querySelectorAll('.skill-item');
-const skillObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.animationDelay = `${Math.random() * 0.5}s`;
-            entry.target.classList.add('animate-in');
-        }
-    });
-}, { threshold: 0.1 });
-
-skillItems.forEach(item => {
-    skillObserver.observe(item);
-});
-
-// Add CSS for skill animation
-const skillAnimationStyle = document.createElement('style');
-skillAnimationStyle.textContent = `
-    .skill-item.animate-in {
-        animation: bounceIn 0.6s ease-out forwards;
-    }
-    
-    @keyframes bounceIn {
-        0% {
-            opacity: 0;
-            transform: scale(0.3);
-        }
-        50% {
-            opacity: 1;
-            transform: scale(1.05);
-        }
-        70% {
-            transform: scale(0.9);
-        }
-        100% {
-            opacity: 1;
-            transform: scale(1);
-        }
-    }
-`;
-document.head.appendChild(skillAnimationStyle);
-
-// Project card hover effects
-document.querySelectorAll('.project-card').forEach(card => {
-    card.addEventListener('mouseenter', function() {
-        this.style.transform = 'translateY(-10px) scale(1.02)';
-    });
-    
-    card.addEventListener('mouseleave', function() {
-        this.style.transform = 'translateY(0) scale(1)';
-    });
-});
+// Keep interactions subtle: no heavy parallax or hover scaling.
 
 // Smooth reveal animation for stats
 const statsObserver = new IntersectionObserver((entries) => {
@@ -343,16 +282,12 @@ const statsObserver = new IntersectionObserver((entries) => {
             const statNumber = entry.target.querySelector('h3');
             const originalText = statNumber.textContent.trim();
             
-            console.log('Processing stat:', originalText); // Debug log
-            
             // Check if this is a purely numeric stat (like "4")
             if (/^\d+$/.test(originalText)) {
                 const finalNumber = parseInt(originalText);
-                console.log('Animating number:', finalNumber); // Debug log
                 animateNumber(statNumber, 0, finalNumber, 2000);
             } else {
                 // For non-numeric stats (GPA, languages, etc.), show immediately
-                console.log('Showing immediately:', originalText); // Debug log
                 statNumber.textContent = originalText;
             }
         }
