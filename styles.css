@@ -536,6 +536,99 @@ section {
     border-color: var(--accent);
 }
 
+/* Orion Quotes Page */
+.quotes-page {
+    padding-top: 130px;
+    padding-bottom: 70px;
+    min-height: calc(100vh - 120px);
+}
+
+.quote-display {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--accent);
+    border-radius: 14px;
+    padding: 3rem 2.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    box-shadow: var(--shadow);
+    min-height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.quote-text {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: clamp(1.6rem, 4vw, 2.4rem);
+    line-height: 1.5;
+    color: var(--ink);
+    font-style: italic;
+    max-width: 60ch;
+    transition: opacity 0.15s ease;
+}
+
+.quote-text.animating {
+    animation: quoteSwap 0.45s ease both;
+}
+
+@keyframes quoteSwap {
+    0% {
+        opacity: 0;
+        transform: translateY(12px) scale(0.97);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.quote-actions {
+    display: flex;
+    gap: 0.7rem;
+    justify-content: center;
+    margin-bottom: 2.5rem;
+    flex-wrap: wrap;
+}
+
+.quote-actions .btn {
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.quote-actions .btn i {
+    margin-right: 0.35rem;
+}
+
+.all-quotes-container {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 1.5rem 1.5rem 0.5rem;
+    animation: fadeInUp 0.35s ease both;
+}
+
+.all-quotes-container h3 {
+    margin-bottom: 1rem;
+    font-size: 1.15rem;
+}
+
+.quotes-list {
+    list-style: none;
+}
+
+.quotes-list li {
+    padding: 0.85rem 1rem;
+    border-bottom: 1px solid var(--line);
+    color: #4f4842;
+    font-style: italic;
+    line-height: 1.6;
+}
+
+.quotes-list li:last-child {
+    border-bottom: none;
+}
+
 /* Footer */
 .footer {
     padding: 1.5rem 0 2rem;
@@ -704,6 +797,10 @@ section {
 
 [data-theme="dark"] .project-link {
     color: #b8d6ff;
+}
+
+[data-theme="dark"] .quotes-list li {
+    color: var(--muted);
 }
 
 [data-theme="dark"] .m-logo {
